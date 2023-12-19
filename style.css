@@ -1,0 +1,116 @@
+.img-delta{
+    width: 100%;
+    height: 50vh;
+    background: url(./media/pann2.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.img-offerte{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover; 
+}
+
+section{
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-size: 3rem;
+    margin: 2rem 0rem;
+}
+
+.faq{
+    max-width: 700px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #000000;
+    cursor: pointer;
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question h3{
+    font-size: 1.8rem;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
+.answer p {
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.faq.active .answer{
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+
+.faq.active svg{
+    transform: rotate(180deg);
+}
+
+svg{
+    transition: transform 0.5s ease-in;
+}
+
+.img-wapp{
+    width: 60px;
+    height: 60px;
+    background: url(./media/wappfin.png);
+    background-size: cover;
+    position: fixed;
+    left: 10px;
+    top: 75%;
+    
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .img-delta{
+        height: 80vh;
+    }
+    .img-offerte{
+        height: 250px;
+        width: 350px;
+    }
+
+    .img-wapp{
+        width: 100px;
+        height: 100px;
+        left: 50px;
+        
+    }
+}
+
+
+
+
