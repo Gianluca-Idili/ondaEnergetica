@@ -15,6 +15,17 @@
     object-fit: cover; 
 }
 
+.img-servizi {
+    white-space: nowrap; /* Evita che le immagini scendano a capo */
+}
+
+.img-servizi img {
+    height: 250px;
+    width: 300px;
+    display: inline-block;
+    margin: 20px; /* Aggiungi margine tra le immagini se lo desideri */
+}
+
 section{
     min-height: 100vh;
     width: 80%;
@@ -44,7 +55,7 @@ section{
 }
 
 .question h3{
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .answer {
@@ -60,7 +71,7 @@ section{
 }
 
 .faq.active .answer{
-    max-height: 300px;
+    max-height: 100em;
     animation: fade 1s ease-in-out;
 }
 
@@ -80,7 +91,108 @@ svg{
     position: fixed;
     left: 10px;
     top: 75%;
+    z-index: 10;
     
+}
+
+.logos{
+    overflow: hidden;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos:before,
+.logos:after{
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos:before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide{
+    animation-play-state: paused;
+}
+
+.logos-slide{
+    display: inline-block;
+    animation: 15s slide infinite linear;
+}
+
+.logos-slide img{
+    height: 100px;
+    margin: 0 40px;
+}
+
+@keyframes slide {
+    form{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.logos2{
+    overflow: hidden;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos2:before,
+.logos2:after{
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos2:before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos2:after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos2:hover .logos-slide2{
+    animation-play-state: paused;
+}
+
+.logos-slide2{
+    display: inline-block;
+    animation: 16s slide2 infinite linear;
+}
+
+.logos-slide2 img{
+    height: 100px;
+    margin: 0 40px;
+}
+
+@keyframes slide2 {
+    from {
+        transform: translateX(-100%); /* Parti dall'estrema sinistra */
+    }
+    to {
+        transform: translateX(0); /* Vai all'estrema destra */
+    }
 }
 
 @keyframes fade {
