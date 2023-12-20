@@ -15,10 +15,6 @@
     object-fit: cover; 
 }
 
-.img-servizi {
-    white-space: nowrap; /* Evita che le immagini scendano a capo */
-}
-
 .img-servizi img {
     height: 250px;
     width: 300px;
@@ -28,7 +24,7 @@
 
 section{
     min-height: 100vh;
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -39,9 +35,13 @@ section{
     font-size: 3rem;
     margin: 2rem 0rem;
 }
+.title-q{
+    font-size: 1.5rem;
+    margin: 2rem 0rem;
+}
 
 .faq{
-    max-width: 700px;
+    max-width: 100%;
     margin-top: 2rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid #000000;
@@ -71,7 +71,7 @@ section{
 }
 
 .faq.active .answer{
-    max-height: 100em;
+    max-height: 1000em;
     animation: fade 1s ease-in-out;
 }
 
@@ -92,7 +92,6 @@ svg{
     left: 10px;
     top: 75%;
     z-index: 10;
-    
 }
 
 .logos{
@@ -215,11 +214,19 @@ svg{
         width: 350px;
     }
 
+    .img-servizi {
+        white-space: nowrap; /* Evita che le immagini scendano a capo */
+    }
+
     .img-wapp{
         width: 100px;
         height: 100px;
         left: 50px;
-        
+    }
+
+    .title-q{
+        font-size: 2rem;
+        margin: 2rem 0rem;
     }
 }
 
