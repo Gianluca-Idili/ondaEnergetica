@@ -9,13 +9,18 @@
 
 .bg-sec {
     background-color: var(--color-sec);
+    
 }
 
+.logoName{
+        font-family: 'Train one', sans-serif;
+        color: #002969;
+}
 
 .img-delta{
+    background: linear-gradient(180deg, rgba(0, 41, 105, 0) 30%, rgba(0, 41, 105, 1) 100%), url(./media/pann2.jpg);
     width: 100%;
     height: 50vh;
-    background: url(./media/pann2.jpg);
     background-size: cover;
     background-position: center;
     
@@ -205,6 +210,17 @@ svg{
     margin: 0 40px;
 }
 
+#myText {
+    text-align: start;
+}
+
+
+@media (min-width: 1300px) {
+    #myText {
+        text-align: end;
+    }
+}
+
 @keyframes slide2 {
     from {
         transform: translateX(-100%); /* Parti dall'estrema sinistra */
@@ -225,7 +241,7 @@ svg{
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     .img-delta{
         height: 80vh;
     }
