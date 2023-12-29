@@ -21,3 +21,19 @@ function emailSend(){
     );
 
 }
+
+window.addEventListener('scroll', function() {
+    var imgWapp = document.getElementById('imgWapp');
+    var footer = document.querySelector('footer');
+  
+    var imgWappRect = imgWapp.getBoundingClientRect();
+    var footerRect = footer.getBoundingClientRect();
+  
+    if (imgWappRect.bottom > footerRect.top) {
+      // L'elemento img-wapp è sopra il footer, nascondilo
+      imgWapp.classList.add('hidden');
+    } else {
+      // L'elemento img-wapp non è sopra il footer, mostra
+      imgWapp.classList.remove('hidden');
+    }
+  });

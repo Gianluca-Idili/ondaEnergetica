@@ -1,271 +1,347 @@
-:root {
-    --color-main: #002969;
-    --color-sec: #85898c;
-}
-
-.bg-main {
-    background-color: var(--color-main);
-}
-
-.bg-sec {
-    background-color: var(--color-sec);
+body{
+    overflow-x: hidden;
+    }
     
-}
-
-.logoName{
-        font-family: 'Train one', sans-serif;
-        color: #002969;
-}
-
-.img-delta{
-    background: linear-gradient(180deg, rgba(0, 41, 105, 0) 30%, rgba(0, 41, 105, 1) 100%), url(./media/pann2.jpg);
-    width: 100%;
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
+    :root {
+        --color-main: #002969;
+        --color-sec: #85898c;
+    }
     
-}
-
-.img-offerte{
-    background: linear-gradient(180deg, rgba(0, 41, 105, 0) 30%, rgba(0, 41, 105, 1) 100%), url(./media/pannfoto1.jpg);
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    object-fit: cover; 
-}
-
-.img-servizi img {
-    height: 250px;
-    width: 300px;
-    display: inline-block;
-    margin: 20px; /* Aggiungi margine tra le immagini se lo desideri */
-}
-
-section{
-    min-height: 100vh;
-    width: 60%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.title{
-    font-size: 3rem;
-    margin: 2rem 0rem;
-}
-.title-q{
-    font-size: 1.5rem;
-    margin: 2rem 0rem;
-}
-
-.faq{
-    max-width: 100%;
-    margin-top: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #000000;
-    cursor: pointer;
-}
-
-.question{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.question h3{
-    font-size: 2rem;
-}
-
-.answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-}
-
-.answer p {
-    padding-top: 1rem;
-    line-height: 1.6;
-    font-size: 1.4rem;
-}
-
-.faq.active .answer{
-    max-height: 1000em;
-    animation: fade 1s ease-in-out;
-}
-
-.faq.active svg{
-    transform: rotate(180deg);
-}
-
-svg{
-    transition: transform 0.5s ease-in;
-}
-
-.img-wapp{
-    width: 60px;
-    height: 60px;
-    background: url(./media/wappfin.png);
-    background-size: cover;
-    position: fixed;
-    left: 10px;
-    top: 75%;
-    z-index: 10;
-}
-
-.dib{
-    width: 60px;
-    height: 60px;
-}
-
-.logos{
-    overflow: hidden;
-    background: white;
-    white-space: nowrap;
-    position: relative;
-}
-
-.logos:before,
-.logos:after{
-    position: absolute;
-    top: 0;
-    width: 80px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-}
-
-.logos:before{
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
-
-.logos:after{
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-}
-
-.logos:hover .logos-slide{
-    animation-play-state: paused;
-}
-
-.logos-slide{
-    display: inline-block;
-    animation: 18s slide infinite linear;
-}
-
-.logos-slide img{
-    height: 100px;
-    margin: 0 40px;
-}
-
-@keyframes slide {
-    form{
-        transform: translateX(0);
+    .bg-main {
+        background-color: var(--color-main);
     }
-    to{
-        transform: translateX(-100%);
+    
+    .bg-sec {
+        background-color: var(--color-sec);
+        
     }
-}
-
-.logos2{
-    overflow: hidden;
-    background: white;
-    white-space: nowrap;
-    position: relative;
-}
-
-.logos2:before,
-.logos2:after{
-    position: absolute;
-    top: 0;
-    width: 80px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-}
-
-.logos2:before{
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
-
-.logos2:after{
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-}
-
-.logos2:hover .logos-slide2{
-    animation-play-state: paused;
-}
-
-.logos-slide2{
-    display: inline-block;
-    animation: 18s slide2 infinite linear;
-}
-
-.logos-slide2 img{
-    height: 100px;
-    margin: 0 40px;
-}
-
-#myText {
-    text-align: start;
-}
-
-
-@media (min-width: 1300px) {
-    #myText {
-        text-align: end;
+    
+    .logoName{
+            font-family: 'Train one', sans-serif;
+            color: #002969;
     }
-}
-
-@keyframes slide2 {
-    from {
-        transform: translateX(-100%); /* Parti dall'estrema sinistra */
-    }
-    to {
-        transform: translateX(0); /* Vai all'estrema destra */
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-@media screen and (min-width: 1280px) {
+    
     .img-delta{
-        height: 80vh;
+        background: linear-gradient(180deg, rgba(0, 41, 105, 0) 30%, rgba(0, 41, 105, 1) 100%), url(./media/pann2.jpg);
+        width: 100%;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;     
     }
+    
     .img-offerte{
+        background: linear-gradient(180deg, rgba(0, 41, 105, 0) 30%, rgba(0, 41, 105, 1) 100%), url(./media/pannfoto1.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover; 
+    }
+    
+    .img-servizi img {
         height: 250px;
-        width: 350px;
+        width: 300px;
+        display: inline-block;
+        margin: 20px; /* Aggiungi margine tra le immagini se lo desideri */
     }
-
-    .img-servizi {
-        white-space: nowrap; /* Evita che le immagini scendano a capo */
+    
+    section{
+        min-height: 100%;
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-
-    .img-wapp{
-        width: 100px;
-        height: 100px;
-        left: 50px;
-    }
-
-    .title-q{
-        font-size: 2rem;
+    
+    .title{
+        text-align: center !important;
+        font-size: 3rem;
         margin: 2rem 0rem;
     }
-}
-
-
-
-
+    .title-q{
+        text-align: center !important;
+        font-size: 1.5rem;
+        margin: 2rem 0rem;
+    }
+    
+    .faq{
+        max-width: 100%;
+        margin-top: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #000000;
+        cursor: pointer;
+        text-align: center;
+    }
+    
+    .question{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .question h4 {
+        flex-grow: 1;
+        text-align: center;
+    }
+    
+    .question svg{
+        margin-left: auto;
+    }
+    
+    .question h3{
+        font-size: 2rem;
+    }
+    
+    .answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    
+    .answer p {
+        padding-top: 1rem;
+        line-height: 1.6;
+        font-size: 1.4rem;
+    }
+    
+    .faq.active .answer{
+        max-height: 1000em;
+        animation: fade 1s ease-in-out;
+    }
+    
+    .faq.active svg{
+        transform: rotate(180deg);
+    }
+    
+    svg{
+        transition: transform 0.5s ease-in;
+    }
+    
+    .img-wapp{
+        width: 60px;
+        height: 60px;
+        background: url(./media/wappfin.png);
+        background-size: cover;
+        position: fixed;
+        left: 10px;
+        top: 75%;
+        z-index: 2;
+        transition: visibility 0.3s ease;
+    }
+    
+    .img-wapp.hidden {
+        visibility: hidden;
+      }
+    
+    footer{
+        z-index: 3;
+    }
+    
+    .dib{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .logos{
+        overflow: hidden;
+        background: white;
+        white-space: nowrap;
+        position: relative;
+    }
+    
+    .logos:before,
+    .logos:after{
+        position: absolute;
+        top: 0;
+        width: 80px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+    }
+    
+    .logos:before{
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    }
+    
+    .logos:after{
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+    }
+    
+    .logos:hover .logos-slide{
+        animation-play-state: paused;
+    }
+    
+    .logos-slide{
+        display: inline-block;
+        animation: 18s slide infinite linear;
+    }
+    
+    .logos-slide img{
+        height: 100px;
+        margin: 0 40px;
+    }
+    
+    @keyframes slide {
+        form{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-100%);
+        }
+    }
+    
+    .logos2{
+        overflow: hidden;
+        background: white;
+        white-space: nowrap;
+        position: relative;
+    }
+    
+    .logos2:before,
+    .logos2:after{
+        position: absolute;
+        top: 0;
+        width: 80px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+    }
+    
+    .logos2:before{
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    }
+    
+    .logos2:after{
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+    }
+    
+    .logos2:hover .logos-slide2{
+        animation-play-state: paused;
+    }
+    
+    .logos-slide2{
+        display: inline-block;
+        animation: 18s slide2 infinite linear;
+    }
+    
+    .logos-slide2 img{
+        height: 100px;
+        margin: 0 40px;
+    }
+    
+    .logos3{
+        overflow: hidden;
+        background: white;
+        white-space: nowrap;
+        position: relative;
+    }
+    
+    .logos3:before,
+    .logos3:after{
+        position: absolute;
+        top: 0;
+        width: 80px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+    }
+    
+    .logos3:before{
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    }
+    
+    .logos3:after{
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+    }
+    
+    .logos3:hover .logos-slide3{
+        animation-play-state: paused;
+    }
+    
+    .logos-slide3{
+        display: inline-block;
+        animation: 18s slide3 infinite linear;
+    }
+    
+    .logos-slide3 img{
+        height: 100px;
+        margin: 0 40px;
+    }
+    
+    @keyframes slide3 {
+        form{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-100%);
+        }
+    }
+    
+    #myText {
+        text-align: start;
+    }
+    
+    
+    @media (min-width: 500px) and (max-width: 1300px) {
+        #myText {
+            text-align: end;
+        }
+    }
+    
+    @keyframes slide2 {
+        from {
+            transform: translateX(-100%); /* Parti dall'estrema sinistra */
+        }
+        to {
+            transform: translateX(0); /* Vai all'estrema destra */
+        }
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    
+    @media screen and (min-width: 1280px) {
+        .img-delta{
+            height: 80vh;
+        }
+        .img-offerte{
+            height: 250px;
+            width: 350px;
+        }
+    
+        .img-servizi {
+            white-space: nowrap; /* Evita che le immagini scendano a capo */
+        }
+    
+        .img-wapp{
+            width: 100px;
+            height: 100px;
+            left: 50px;
+        }
+    
+        .title-q{
+            font-size: 2rem;
+            margin: 2rem 0rem;
+        }
+    }
+    
+    
+    
+    
+    
